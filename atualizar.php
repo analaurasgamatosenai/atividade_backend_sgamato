@@ -1,5 +1,5 @@
 <?php
-    inclide "config/conexao.php";
+    include "config/conexao.php";
     $id = intval($_POST["id"]);
     $cliente = $_POST["cliente"];
     $equipamento = $_POST["equipamento"];
@@ -8,22 +8,21 @@
     $status = $_POST["status"];
 
     $sql = "UPDADTE ordens_servico
-            SET cliente= ?
-                equipamento=?
-                problema=?
-                data_entrada=?
-                status=?
+            SET cliente= ?,
+                equipamento=?,
+                problema=?,
+                data_entrada=?,
+                status=?,
             WHERE id=?";
     $stmt = $conexao-> prepare($sql)
-    $stmt-> bind_param //vai passar os parâmetros de como preencher (string, inteiro etc)
-    (
+    $stmt-> bind_param (
         "sssssi",
         $cliente,
         $equipamento,
         $problema,
         $data_entrega,
         $status,
-        $id;
+        $id
     );
 
     if($stmt->execute()){

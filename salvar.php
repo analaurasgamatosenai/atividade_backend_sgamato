@@ -7,7 +7,7 @@
     $data_entrada = $_POST["data_entrada"];
     $status = $_POST["status"];
 
-    $sql = "INSERT INTO ordens_servicos
+    $sql = "INSERT INTO ordens_servico
             (cliente, equipamento, problema, data_entrada, status)
             VALUES (?, ?, ?, ?, ?)"; //ESPAÇOS RESERVADOS
     

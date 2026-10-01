@@ -1,7 +1,7 @@
 <?php
     include "config/conexao.php";
 
-    $sql = "SELECT * FROM ordens_servicos";
+    $sql = "SELECT * FROM ordens_servico";
     $resultado = $conexao -> query($sql);
 ?>
 
